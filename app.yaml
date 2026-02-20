@@ -1,0 +1,7 @@
+runtime: python39
+service: sharepoint
+
+handlers:
+- url: /.*
+  static_files: index.html
+  upload: index.html
