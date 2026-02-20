@@ -1,7 +1,21 @@
-runtime: python39
+# Option 1: Standard Environment (Python/Static) - UNCOMMENT TO USE
+# runtime: python39
+# service: sharepoint
+# handlers:
+# - url: /.*
+#   static_files: index.html
+#   upload: index.html
+
+# Option 2: Flexible Environment (Docker) - CURRENTLY ACTIVE
+runtime: custom
+env: flex
 service: sharepoint
 
-handlers:
-- url: /.*
-  static_files: index.html
-  upload: index.html
+# Note: Flexible environment requires at least 1 instance and specific resources
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
