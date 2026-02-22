@@ -9,7 +9,6 @@
 # Option 2: Flexible Environment (Docker) - CURRENTLY ACTIVE
 runtime: custom
 env: flex
-service: sharepoint
 
 # Note: Flexible environment requires at least 1 instance and specific resources
 resources:
